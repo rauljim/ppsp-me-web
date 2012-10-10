@@ -1,0 +1,25 @@
+application: ppsp-me
+version: 120900
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /index.html
+  static_dir: /
+- url: /start.html
+  static_dir: /
+- url: /info.html
+  static_dir: /
+- url: /.*
+  script: main.app
+- url: /stylesheets
+  static_dir: stylesheets
+  
+  
+libraries:
+- name: jinja2
+  version: latest
+  
+  
+#TODO: check static
